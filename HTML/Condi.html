@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Brand</title>
+</head>
+
+<body>
+    <header class="header_other">
+        <img src="../ASSETS/packaging1.jpg" alt="" class="banner">
+        <a href="" class="logo">Myuka.</a>
+        <div class="toggle"></div>
+        <nav class="nav_other">
+            <ul class="ul_other">
+                <li class="li_other"><a class="a_other" href="index.html">Home</a></li>
+                <li class="li_other"><a href="Condi.html">Conditionnement</a></li>
+                <li class="li_other"><a href="About.html">About</a></li>
+                <li class="li_other"><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="condi_section">
+
+
+
+        <!-----------------Conditionnement----------------------->
+
+        <div class="container_infocondi">
+            <h2 class="infocondi_title">Chez nous on ne mets pas en boite... On emballe !</h2>
+            <p class="infocondi_content">Pour Myuka, le contenant est aussi important que le contenu! C'est pourquoi tous nos envois sont faits avec le plus grand soin, dans le respect de l'environnement. <br> Nos experts veillent à ce que chaque colis soit soigneusement protégé
+                et étiqueté afin que nos produits vous arrivent dans un parfait état et dans les meilleurs délais.
+            </p>
+        </div>
+
+
+        <!-----------------information marque ----------------------->
+
+
+
+        <div class="slider">
+            <figure>
+                <img src="../ASSETS/slider1.jpg" alt="">
+                <img src="../ASSETS/slider2.jpg" alt="">
+                <img src="../ASSETS/slider1.jpg" alt="">
+                <img src="../ASSETS/slider3.jpg" alt="">
+                <img src="../ASSETS/slider1.jpg" alt="">
+            </figure>
+        </div>
+        <!--------------------------------Footer start------------------------------------>
+        <hr>
+
+        <div class="container_footer">
+            <footer class="credit">
+                <p class="p_credit">Crédits et copyright de la page</p>
+            </footer>
+        </div>
+
+    </section>
+
+
+    </section>
+
+
+
+    <script>
+        window.addEventListener("scroll", function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+        const navigation = document.querySelector('nav');
+        document.querySelector('.toggle').onclick = function() {
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+
+
+
+</body>
+
+</html>

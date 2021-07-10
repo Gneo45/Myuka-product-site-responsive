@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Brand</title>
+</head>
+
+<body>
+    <header>
+        <img src="../ASSETS/bg-contact.jpg" alt="" class="banner">
+        <a href="" class="logo">Myuka.</a>
+        <div class="toggle"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Condi.html">Conditionnement</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <section>
+
+        <!----------------Formulaire ----------------------->
+        <div class="container_contact_title">
+            <h2>Rejoingnez nous!</h2>
+        </div>
+
+        <div class="container_form">
+            <form action="" method="POST">
+
+                <fieldset>
+                    <legend>Inscription</legend>
+
+                    <div class="container_input">
+                        <Label for="nom_imput">Votre nom</Label><input type="text" name="Nom" id="nom_input" placeholder="Néault" required>
+                        <Label for="prenom_input">Votre prénom</Label><input type="text" name="Nom" id="prenom_input" placeholder="Grégory" required>
+                        <Label for="email_input">Votre E-mail</Label><input type="text" name="email" id="email_input" placeholder="mail@mai.com" required>
+                        <input class="button" id="submit" type="button" value="Rejoindre la MyukaFamilly!">
+                    </div>
+        </div>
+
+        <!--------------------------------Footer start------------------------------------>
+        <hr>
+
+        <div class="container_footer">
+            <footer class="credit">
+                <p class="p_credit">Crédits et copyright de la page</p>
+            </footer>
+        </div>
+
+    </section>
+
+
+    <script>
+        window.addEventListener("scroll", function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+        const navigation = document.querySelector('nav');
+        document.querySelector('.toggle').onclick = function() {
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myuka</title>
+</head>
+
+<body>
+    <header>
+
+        <!-- Background-->
+        <img src="../ASSETS/bg-brand7.jpg" alt="Background--" class="banner">
+        <a href="" class="logo">Myuka.</a>
+        <div class="toggle"></div>
+        <!-- Navigation-->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Condi.html">Conditionnement</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+
+        <h2 class="product_title">Votre choix du jour...</h2>
+
+        <div class="container_produit">
+            <p class="product_name">La soupe du chef !</p>
+            <img src="../ASSETS/Produit.jpg" alt="" class="image_produit">
+        </div>
+
+
+
+        <!-----------------Code barre----------------------->
+        <div class="container_codebarre">
+            <h2>Code barre :</h2>
+            <img src="../assets/Code_barre.jpg" alt="" class="codebarreimg">
+        </div>
+        <!-----------------Nutriscore----------------------->
+        <div class="container_infonutri">
+            <h2>Nutriscore :</h2>
+            <img src="../assets/nutriscore.png" alt="nutriscore" class="tableaunutri">
+        </div>
+
+
+        <!-----------------Liste ingredients----------------------->
+        <div class="container_ingredientlist">
+            <h2 class="ingredienttitle">Liste des ingredients:</h2>
+            <ul class="ingredientlist">
+                <li>750 g de poivrons rouges</li>
+                <li>200 g de crème fraîche(ou de yaourt nature)</li>
+                <li>20 g de beurre</li>
+                <li>50 cl de bouillon de légumes</li>
+                <li>1 oignon</li>
+                <li>1 gousse d'ail</li>
+                <li>2 cuillères à café de paprika en poudre</li>
+                <li>2 cuillères à café de vinaigre</li>
+                <li>quelques tiges de ciboulette</li>
+                <li>sel, poivre</li>
+            </ul>
+        </div>
+        <!-----------------Realisation----------------------->
+        <div class="container_realisation">
+
+            <h2 class="realisation_title">Realisation</h2>
+            <ul class="realisation_list">
+                <li class="picto1">Difficulté Facile</li>
+                <li class="picto2">Préparation 15 mn</li>
+                <li class="picto3">Cuisson 40 mn</li>
+                <li class="picto4">Temps Total 55 mn</li>
+
+        </div>
+
+        <!--------------------------------Footer start------------------------------------>
+        <hr>
+
+        <div class="container_footer">
+            <footer class="credit">
+                <p class="p_credit">Crédits et copyright de la page</p>
+            </footer>
+        </div>
+
+    </section>
+
+
+    <script>
+        window.addEventListener("scroll", function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+        const navigation = document.querySelector('nav');
+        document.querySelector('.toggle').onclick = function() {
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../CSS/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Brand</title>
+</head>
+
+<body>
+    <header>
+        <img src="../ASSETS/bg-about1.jpg" alt="" class="banner">
+        <a href="" class="logo">Myuka.</a>
+        <div class="toggle"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Condi.html">Conditionnement</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <section>
+
+        <!-----------------information marque ----------------------->
+
+
+        <div class="container_infomarque">
+            <h2 class="infomarque_title"> Informations sur la marque :</h2>
+            <p>infomarque Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod nihil, dolorem at eum laudantium iusto officiis incidunt praesentium ipsam quidem expedita libero doloremque a sapiente explicabo iure quis corrupti. Totam minima quod
+                optio accusamus ullam vitae neque porro corrupti eveniet debitis iusto sequi exercitationem deserunt in, repudiandae similique et nulla.</p>
+        </div>
+
+        <!--------------------------------Footer start------------------------------------>
+        <hr>
+
+        <div class="container_footer">
+            <footer class="credit">
+                <p class="p_credit">Crédits et copyright de la page</p>
+            </footer>
+        </div>
+
+    </section>
+
+
+    </section>
+
+
+    <script>
+        window.addEventListener("scroll", function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+        const navigation = document.querySelector('nav');
+        document.querySelector('.toggle').onclick = function() {
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>

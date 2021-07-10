@@ -1,0 +1,787 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    src: url(../ASSETS/fonts/DancingScript-Medium.ttf);
+}
+
+body {
+    min-height: 1000px;
+    background-color: #fff;
+    background-image: url(../ASSETS/bg-cook1.jpg);
+}
+
+hr {
+    grid-column: 1/5;
+    margin: 40px 0 10px 0;
+}
+
+
+/*-----------------------------------HEADER-----------------*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0 100px;
+    background: #000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: 1s;
+}
+
+header.sticky {
+    height: 80px;
+}
+
+header .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+
+header.sticky .banner {
+    opacity: 1;
+}
+
+header .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15vw;
+    color: #fff;
+    font-weight: 700;
+    transition: 1s;
+    text-decoration: none;
+    z-index: 1;
+}
+
+header.sticky .logo {
+    position: absolute;
+    font-size: 2em;
+    left: 100px;
+    transform: translate(0%, -50%);
+}
+
+
+/*-----------------------------------------NAV-----------------------*/
+
+nav {
+    position: relative;
+    display: flex;
+    z-index: 1;
+}
+
+nav ul {
+    position: relative;
+    display: flex;
+    transition: 0.25s;
+    transform: translate(100px);
+    opacity: 0;
+}
+
+header.sticky nav ul {
+    transform: translate(0);
+    opacity: 1;
+    transition-delay: 0.75s;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    color: #fff;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #ff275f;
+}
+
+
+/*-----------------------------------------Home CONTENT-----------------------*/
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    margin-top: 70vh;
+    padding: 50px 10px;
+    z-index: 0;
+}
+
+.product_title {
+    grid-column: 1/5;
+    font-size: 2.5em;
+    color: #000;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    text-align: left;
+    padding-left: 50px;
+    border-bottom: 2px solid #000;
+    margin-right: 600px;
+    margin-left: 100px;
+}
+
+.container_produit {
+    grid-column: 2/4;
+    width: 120%;
+    justify-self: center;
+    background-color: #31343a;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border: 2px solid #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.product_name {
+    font-family: 'Dancing Script', cursive;
+    color: blanchedalmond;
+    grid-column: 1/5;
+    justify-self: center;
+    align-self: center;
+    font-size: 3em;
+    border-bottom: 1px solid #fff;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-right: 350px;
+    padding-left: 0;
+}
+
+.image_produit {
+    width: 70%;
+    grid-column: 1/5;
+    margin: 20px;
+    margin-bottom: 40px;
+    justify-self: center;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+
+.container_infomarque {
+    margin: 20px;
+    margin-top: 500px;
+    justify-self: center;
+    grid-column: 1/5;
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.container_infomarque h2 {
+    font-size: 1.5em;
+    padding-top: 15px;
+}
+
+
+/*Codebarre*/
+
+.container_codebarre {
+    margin-top: 70px;
+    grid-column: 1/3;
+    justify-self: center;
+    width: 80%;
+    height: 70%;
+    background-color: #31343a;
+    background: radial-gradient( rgb(143, 140, 140), #31343a);
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border: 2px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.container_codebarre h2 {
+    font-size: 1.9em;
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    text-align: left;
+    padding-left: 50px;
+    border-bottom: 1px solid white;
+    margin-right: 300px;
+    margin-left: 20px;
+}
+
+section .codebarreimg {
+    width: 40%;
+    padding-top: 12px;
+    background-color: transparent;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+
+.container_infonutri {
+    margin-top: 70px;
+    grid-column: 3/5;
+    justify-self: center;
+    width: 80%;
+    height: 70%;
+    background-color: #31343a;
+    background: radial-gradient( rgb(143, 140, 140), #31343a);
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border: 2px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+section .container_infonutri h2 {
+    font-size: 1.9em;
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    text-align: left;
+    padding-left: 50px;
+    border-bottom: 1px solid white;
+    margin-right: 300px;
+    margin-left: 20px;
+}
+
+section .tableaunutri {
+    padding-top: 10px;
+    width: 35%;
+}
+
+
+/*-liste ingredients*/
+
+.container_ingredientlist {
+    margin-top: 70px;
+    grid-column: 2/3;
+    justify-self: flex-end;
+    background-color: #31343a;
+    background: radial-gradient( rgb(143, 140, 140), #31343a);
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border: 2px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.container_ingredientlist h2 {
+    display: inline;
+    font-size: 1.9em;
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    text-align: left;
+    padding-left: 50px;
+    border-bottom: 1px solid white;
+    margin-right: 60px;
+    margin-left: 20px;
+}
+
+.container_ingredientlist ul {
+    list-style-type: initial;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container_ingredientlist ul li {
+    text-align: left;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+    font-weight: bolder;
+}
+
+
+/*realistation*/
+
+.container_realisation {
+    width: 50%;
+    margin-top: 70px;
+    grid-column: 3/5;
+    justify-self: flex-start;
+    align-self: flex-start;
+    background: radial-gradient( rgb(143, 140, 140), #31343a);
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border: 2px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.container_realisation h2 {
+    font-size: 1.9em;
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    text-align: left;
+    padding-left: 50px;
+    border-bottom: 1px solid white;
+    margin-right: 300px;
+    margin-left: 20px;
+}
+
+.container_realisation ul {
+    list-style-type: initial;
+    text-align: center;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container_realisation ul li {
+    text-align: left;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+    font-weight: bolder;
+    list-style-type: none;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+.container_realisation .picto1 {
+    background-image: url(../ASSETS/chef.png);
+}
+
+.container_realisation .picto2 {
+    background-image: url(../ASSETS/cooking.png);
+}
+
+.container_realisation .picto3 {
+    background-image: url(../ASSETS/chrono.png);
+}
+
+.container_realisation .picto4 {
+    background-image: url(../ASSETS/clock.png);
+}
+
+
+/*footer*/
+
+.container_footer {
+    margin: 20px 0s;
+    grid-column: 1/5;
+    justify-self: center;
+    height: 100%;
+    width: 98%;
+}
+
+.container_footer p {
+    font-size: 0.7em;
+    margin-top: 40px;
+}
+
+
+/*-----------------------------COnditionnement---------------------------------------------*/
+
+.condi_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    margin-top: 50vh;
+    padding: 50px 10px;
+    z-index: 0;
+}
+
+
+/*slider*/
+
+.slider {
+    z-index: -1;
+    overflow: hidden;
+    grid-column: 2/4;
+    border: 20px solid #31343a;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+.slider figure img {
+    width: 20%;
+    float: left;
+}
+
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+    20% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    95% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+}
+
+
+/*condit*/
+
+.container_infocondi {
+    grid-column: 1/5;
+    justify-self: center;
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.container_infocondi h2 {
+    font-size: 1.9em;
+    color: #000;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    text-align: left;
+    padding-left: 50px;
+    border-bottom: 2px solid #000;
+    margin-right: 600px;
+    margin-left: 100px;
+}
+
+.container_infocondi p {
+    font-size: 1.7em;
+    font-weight: 500;
+    padding: 40px 200px 10px 200px;
+}
+
+
+/*-----------------------------ABOUT---------------------------------------------*/
+
+.container_infomarque {
+    grid-column: 1/5;
+    justify-self: center;
+    border: 2px solid var(--secondary);
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: 'Dancing Script', cursive;
+}
+
+.container_infomarque h2 {
+    font-size: 1.9em;
+    color: #000;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    text-align: left;
+    padding-left: 50px;
+    border-bottom: 2px solid #000;
+    margin-right: 600px;
+    margin-left: 100px;
+}
+
+.container_infomarque p {
+    font-size: 1.7em;
+    font-weight: 500;
+    padding: 40px 200px 10px 200px;
+}
+
+
+/*-----------------------------CONTACT-------------------------------------------*/
+
+.container_contact_title {
+    grid-column: 1/5;
+    font-size: 1.9em;
+    color: #000;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    text-align: left;
+    padding-left: 50px;
+    border-bottom: 2px solid #000;
+    margin-right: 600px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+}
+
+.container_form {
+    grid-column: 2/4;
+    justify-self: center;
+    background-color: #31343a;
+    background: radial-gradient( rgb(143, 140, 140), #31343a);
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border: 2px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    font-family: 'Dancing Script', cursive;
+    padding: 10px 30px;
+}
+
+fieldset {
+    width: 500px;
+    border: 0;
+    background-color: var(--primary);
+    font-size: 1.5em;
+    font-weight: 600;
+    font-size: 1.9em;
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    text-align: left;
+}
+
+label {
+    font-family: 'Dancing Script', cursive;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.8em;
+    margin-right: 0;
+    margin-top: 8px;
+    width: 100%;
+    text-align: left;
+}
+
+select {
+    width: 100%;
+    height: 30px;
+    margin-top: 8px;
+}
+
+#submit {
+    align-self: center;
+    width: 50%;
+    margin: 20px;
+}
+
+.container_input {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.button {
+    background: none;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bolder;
+    border: 2px solid #000;
+    color: var(--quadra);
+    padding: 12px 12px;
+    border-radius: 20px;
+    box-shadow: 1px 2px 3px #000;
+    display: inline-block;
+}
+
+.button:hover {
+    color: #fff;
+    background: rgb(121, 120, 120);
+    box-shadow: rgba(106, 170, 244, 0.35) 30px 48px 150px 30px;
+}
+
+input {
+    background: #000;
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    box-shadow: rgba(106, 170, 244, 0.35) 0px 48px 150px 0px;
+    color: #fff;
+}
+
+
+/*-----------------------------RESPONSIVE--------------------------------
+---------------------------------------------------------------------------*/
+
+@media screen and (max-width: 960px) {
+    section,
+    header {
+        padding: 40px;
+    }
+    section h2 {
+        font-size: 2em;
+    }
+    header.sticky .logo {
+        left: 40px;
+        color: #fff;
+        transition-delay: 0.75s;
+    }
+    header.sticky .banner {
+        opacity: 0;
+    }
+    nav ul {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+    nav.active ul {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 80px);
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 1;
+        visibility: visible;
+    }
+    header.sticky nav ul {
+        opacity: 1;
+        visibility: visible;
+    }
+    nav ul li a {
+        font-size: 1.5em;
+        padding: 15px 15px;
+    }
+    header.sticky .toggle {
+        position: fixed;
+        top: 20px;
+        right: 40px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        background: #fff url(menu.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    header.sticky .toggle.active {
+        background: #fff url(../ASSETS/close.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .product_title {
+        grid-column: 1/5;
+        margin: 0;
+    }
+    .container_produit {
+        grid-column: 1/5;
+        width: 120%;
+        margin: 0;
+        padding: 0;
+    }
+    .product_name {
+        margin: 0;
+        border: 0;
+    }
+    .image_produit {
+        width: 100%;
+        grid-column: 1/5;
+        margin: 0px;
+        margin-bottom: 40px;
+        justify-self: center;
+        box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+    }
+    .container_codebarre {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        grid-column: 1/5;
+    }
+    .container_codebarre h2 {
+        margin-right: 50px;
+        margin-left: 10px;
+    }
+    section .codebarreimg {
+        width: 60%;
+        padding-top: 12px;
+        padding-bottom: 10px;
+    }
+    .container_infonutri {
+        width: 100%;
+        height: 250px;
+        margin-top: 0px;
+        grid-column: 1/5;
+        justify-self: center;
+        margin-bottom: 30px;
+    }
+    section .container_infonutri h2 {
+        margin-right: 50px;
+        margin-left: 10px;
+    }
+    section .tableaunutri {
+        padding-top: 10px;
+        width: 60%;
+    }
+    .container_ingredientlist {
+        margin-top: 0px;
+        grid-column: 1/5;
+        width: 100%;
+    }
+    .container_realisation {
+        width: 100%;
+        margin-top: 0px;
+        grid-column: 1/5;
+    }
+    .container_realisation h2 {
+        margin-right: 50px;
+        margin-left: 10px;
+    }
+    /*condi*/
+    /*slider*/
+    .slider {
+        grid-column: 1/5;
+    }
+    .container_infocondi {
+        grid-column: 1/5;
+        margin: 0;
+        padding: 0;
+    }
+    .container_infocondi h2 {
+        margin: 0;
+        padding: 0;
+        padding-left: 50px;
+    }
+    .container_infocondi p {
+        padding: 0;
+        margin: 0;
+        font-size: 1.3em;
+    }
+    .container_infomarque {
+        margin: 0;
+        padding: 0;
+        padding-left: 50px;
+    }
+    .container_infomarque h2 {
+        margin: 0;
+        padding: 0;
+    }
+    .container_infomarque p {
+        padding: 0;
+        margin: 0;
+        font-size: 1.3em;
+    }
+    fieldset {
+        width: 400px;
+    }
+    .container_contact_title {
+        margin: 0;
+        padding: 0;
+        padding-left: 20px;
+    }
+}
